@@ -6,6 +6,8 @@ ARG TARGETOS=linux
 ARG TARGETARCH=amd64
 
 COPY go.mod ./
+RUN go mod download
+
 COPY cmd ./cmd
 COPY internal ./internal
 
