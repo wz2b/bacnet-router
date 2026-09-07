@@ -133,6 +133,12 @@ Cache and learned-state responses must obey split-horizon rules. Information lea
 
 ---
 
+### Route Table Containment
+
+SuperRouter is designed to maintain a large global view of BACnet network reachability without requiring every downstream BACnet router to maintain the same view. Route information can be learned centrally and exported selectively or in response to targeted routing requests. This is particularly useful with embedded BACnet routers that have relatively small routing-table capacities.
+
+---
+
 ### COV-Aware Forwarding
 
 SuperRouter can observe BACnet COV subscriptions and maintain knowledge of which subscribers are interested in which devices or objects.
