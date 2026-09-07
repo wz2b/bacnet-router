@@ -12,6 +12,8 @@ type LocalEndpoint struct {
 	// Name is a human-readable identifier for this endpoint.
 	Name string
 
+	SortOrder int `gorm:"not null"`
+
 	/*
 		BindAddress is the local IP address on which the SuperRouter binds
 		its BACnet/IP socket.

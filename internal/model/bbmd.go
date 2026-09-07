@@ -38,6 +38,8 @@ type ForeignBBMD struct {
 	// Name is a human-readable name used for display and configuration.
 	Name string
 
+	SortOrder int `gorm:"not null"`
+
 	/*
 		LocalEndpoint identifies the local BACnet/IP endpoint used to
 		communicate with this BBMD.

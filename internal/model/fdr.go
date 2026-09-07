@@ -14,6 +14,8 @@ separately from BACnet network-layer/application-layer traffic.
 type ForeignDeviceRegistration struct {
 	ID uint `gorm:"primaryKey"`
 
+	SortOrder int `gorm:"not null"`
+
 	/*
 		LocalEndpoint identifies which of our BBMD endpoints accepted
 		the registration.
@@ -22,6 +24,7 @@ type ForeignDeviceRegistration struct {
 		than one of our local endpoints, so the registration is uniquely
 		identified by LocalEndpointID + Address.
 	*/
+
 	LocalEndpointID uint `gorm:"not null;uniqueIndex:idx_fdr_endpoint_address"`
 	LocalEndpoint   LocalEndpoint
 
