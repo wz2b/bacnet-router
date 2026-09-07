@@ -4,30 +4,18 @@ import {
     useParams,
 } from "react-router-dom";
 
-export default function BBMDLayout() {
-    const { bbmdId } = useParams();
+export default function InterfaceLayout() {
+    const { interfaceId } = useParams();
 
     return (
         <div className="section-layout">
             <div className="section-header">
-                <h1>BBMD {bbmdId}</h1>
+                <h1>Interface {interfaceId}</h1>
             </div>
 
             <nav className="section-tabs">
                 <NavLink to="settings">
                     Settings
-                </NavLink>
-
-                <NavLink to="routes">
-                    Routes
-                </NavLink>
-
-                <NavLink to="cov">
-                    COV
-                </NavLink>
-
-                <NavLink to="traffic">
-                    Traffic Policy
                 </NavLink>
 
                 <NavLink to="diagnostics">

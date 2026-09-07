@@ -485,6 +485,106 @@ code {
   max-width: 500px;
 }
 
+.form-field-row {
+  display: grid;
+
+  grid-template-columns:
+    190px
+    minmax(0, 1fr);
+
+  gap: 18px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid var(--border-light);
+}
+
+.form-field-row:last-child {
+  border-bottom: none;
+}
+
+.form-field-label {
+  padding-top: 7px;
+}
+
+.form-field-label label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.form-field-control {
+  max-width: 600px;
+}
+
+.form-field-hint {
+  margin-top: 5px;
+
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.form-field-help {
+  margin-top: 7px;
+}
+
+.form-field-help-toggle {
+  padding: 0;
+
+  border: 0;
+
+  background: none;
+  color: var(--accent);
+
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.form-field-help-toggle:hover {
+  text-decoration: underline;
+}
+
+.form-field-help-content {
+  margin-top: 7px;
+  padding: 10px 12px;
+
+  background: #f7f8fa;
+
+  border-left: 3px solid var(--border);
+  border-radius: 2px;
+
+  color: #49525c;
+
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.form-field-help-content p {
+  margin: 0 0 8px;
+}
+
+.form-field-help-content p:last-child {
+  margin-bottom: 0;
+}
+
+.form-field-error {
+  margin-top: 5px;
+
+  color: var(--danger);
+
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+input[aria-invalid="true"]:focus {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 2px rgb(184 50 50 / 12%);
+}
+
 input[type="text"],
 input[type="password"],
 input[type="number"],
@@ -758,5 +858,46 @@ tbody tr:hover {
   .section-content {
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  padding: 16px;
+
+  background: var(--bg-panel);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.stat-value {
+  font-size: 1.7rem;
+  font-weight: 650;
+  line-height: 1.1;
+}
+
+.stat-label {
+  margin-top: 5px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

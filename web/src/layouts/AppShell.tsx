@@ -11,6 +11,11 @@ interface BBMDNavItem {
     name: string;
 }
 
+interface InterfaceNavItem {
+    id: number;
+    name: string;
+}
+
 const bbmds: BBMDNavItem[] = [
     {
         id: 1,
@@ -19,6 +24,17 @@ const bbmds: BBMDNavItem[] = [
     {
         id: 2,
         name: "BBMD 2",
+    },
+];
+
+const interfaces: InterfaceNavItem[] = [
+    {
+        id: 1,
+        name: "BACnet Primary",
+    },
+    {
+        id: 2,
+        name: "BACnet Secondary",
     },
 ];
 
@@ -53,9 +69,9 @@ export default function AppShell() {
                 </div>
 
                 <div className="app-user">
-          <span className="app-username">
-            {user?.displayName ?? user?.username}
-          </span>
+                    <span className="app-username">
+                        {user?.displayName ?? user?.username}
+                    </span>
 
                     <button
                         type="button"
@@ -79,10 +95,29 @@ export default function AppShell() {
                         >
                             Dashboard
                         </NavLink>
+                    </div>
 
-                        <NavLink to="/interfaces">
+                    <div className="nav-group">
+                        <div className="nav-group-title">
                             Interfaces
+                        </div>
+
+                        <NavLink
+                            to="/interfaces"
+                            end
+                        >
+                            All Interfaces
                         </NavLink>
+
+                        {interfaces.map((iface) => (
+                            <NavLink
+                                key={iface.id}
+                                className="nav-object"
+                                to={`/interfaces/${iface.id}`}
+                            >
+                                {iface.name}
+                            </NavLink>
+                        ))}
                     </div>
 
                     <div className="nav-group">
@@ -90,11 +125,18 @@ export default function AppShell() {
                             BBMDs
                         </div>
 
+                        <NavLink
+                            to="/bbmds"
+                            end
+                        >
+                            All BBMDs
+                        </NavLink>
+
                         {bbmds.map((bbmd) => (
                             <NavLink
                                 key={bbmd.id}
                                 className="nav-object"
-                                to={`/bbmds/${bbmd.id}/settings`}
+                                to={`/bbmds/${bbmd.id}`}
                             >
                                 {bbmd.name}
                             </NavLink>
