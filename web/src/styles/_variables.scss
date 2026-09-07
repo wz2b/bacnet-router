@@ -1,0 +1,56 @@
+:root {
+  font-family:
+		  -apple-system,
+		  BlinkMacSystemFont,
+		  "Segoe UI",
+		  Roboto,
+		  Oxygen,
+		  Ubuntu,
+		  Cantarell,
+		  "Fira Sans",
+		  "Droid Sans",
+		  "Helvetica Neue",
+		  sans-serif;
+
+  font-size: 16px;
+  line-height: 1.4;
+
+  color: #20242a;
+  background: #f4f5f7;
+
+  --header-height: 52px;
+  --sidebar-width: 240px;
+
+  --bg-page: #f4f5f7;
+  --bg-panel: #ffffff;
+  --bg-sidebar: #1f2933;
+  --bg-sidebar-hover: #2c3945;
+  --bg-sidebar-active: #394958;
+
+  --text-primary: #20242a;
+  --text-secondary: #68727d;
+  --text-sidebar: #d9e0e6;
+  --text-sidebar-muted: #8e9ba6;
+
+  --border: #d5dae0;
+  --border-light: #e7eaee;
+
+  --accent: #1f6fb2;
+  --accent-hover: #185a91;
+  --danger: #b83232;
+
+  --radius: 4px;
+}
+
+@media (max-width: 800px) {
+  :root {
+	--sidebar-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+	--sidebar-width: 150px;
+  }
+}
+
