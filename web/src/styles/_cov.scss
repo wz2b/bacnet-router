@@ -1,0 +1,37 @@
+.cov-title {
+  color: var(--text-primary);
+}
+
+.cov-subtitle,
+.cov-card-help,
+.cov-field small {
+  color: var(--text-secondary);
+}
+
+.cov-button {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+
+  &:hover {
+    background: var(--accent-hover);
+  }
+}
+
+.cov-link-button {
+  color: var(--accent);
+
+  &.danger {
+    color: var(--danger);
+  }
+}
+
+.cov-tab {
+  color: var(--text-secondary);
+
+  &.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+}

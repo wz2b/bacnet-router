@@ -95,6 +95,13 @@ export default function AppShell() {
                         >
                             Dashboard
                         </NavLink>
+
+                        <NavLink
+                            to="/cov"
+                            end
+                        >
+                            COV Settings
+                        </NavLink>
                     </div>
 
                     <div className="nav-group">

@@ -124,3 +124,19 @@ export interface BBMDConfig {
         whoIsRouterLimit: number;
     };
 }
+
+
+
+export interface COVOptimizationRule {
+    id: string;
+    enabled: boolean;
+
+    foreignBBMDId?: string;
+
+    deviceInstance?: number;
+    objectType?: number;
+    objectInstance?: number;
+
+    refreshCoalesceSeconds: number;
+    refreshForwarding: "source-path" | "subscriber-paths";
+}
